@@ -1,13 +1,11 @@
 extends layout 
 
 
-block content
-    header.w-full.bg-slate-100.fixed.top-0.left-0.z-10
-      
+block content      
     main
       section.relative.mb-12
-        img.w-full.h-screen.object-cover.brightness-50(src="/images/banner.png", alt="key visual of Foo Company")
-        h1(class="text-6xl font-bold text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2") Foo Company
+        img.w-full.h-screen.object-cover.brightness-50(src="/images/banner.png", alt="banner logo")
+        h2(class="text-6xl font-bold text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2") DiveSphere
       section.container.mb-12
         h2.text-4xl.font-bold.mb-6 Our Services
         .grid.grid-cols-3.gap-12
@@ -22,10 +20,10 @@ block content
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan, sem et porttitor placerat, lacus risus molestie ligula, congue venenatis augue ante ac dui. Aliquam ipsum neque, tempus id magna eget, fringilla sollicitudin nunc. Phasellus non eros maximus, posuere elit in, vestibulum orci. Phasellus eget pellentesque ligula.
     footer.w-full.bg-slate-900.text-white
       .container.flex.justify-between.items-center.mb-6
-        a.font-bold(href="#") Foo Company 
+        a.font-bold(href="#") DiveSphere 
         nav 
           ul.flex.justify-end
             each item in navItems
               li
-                a.block.p-4(item.href="#")= item.text
+                a.block.p-4(href=item.href)= item.text
       small.block.text-center Copyright © 2023 Foo Company

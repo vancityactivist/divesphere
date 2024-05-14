@@ -5,18 +5,18 @@ html
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block navigation
-      nav.bg-blue-600.p-4
-          .container.mx-auto.flex.justify-between.items-center
-            .text-white.text-lg.font-bold
-              a(href="/") DiveSphere
-            ul.flex.space-x-4
-              each item in navItems
-                li
-                  a.text-white(class="hover:text-gray-300", href=item.href)= item.text
-
-
+  body.text-gray-600.bg-gray-50.dark
+  header
+    nav.navbar.bg-blue-600.text-white.p-4
+      .container.mx-auto.flex.justify-between.items-center
+        .navbar-start
+          a.text-lg.font-bold(href="/") DiveSphere
+        .navbar-center.hidden.md 
+          ul.menu.menu-horizontal
+            each item in navItems
+              li
+                a.text-white.hover(href=item.href)=item.text
+        .navbar-end
     block content
 
   // TailwindCSS and DaisyUI Scripts
