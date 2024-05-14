@@ -1,0 +1,47 @@
+extends layout 
+
+block navigation
+  nav.bg-blue-600.p-4
+      .container.mx-auto.flex.justify-between.items-center
+        .text-white.text-lg.font-bold
+          a(href="/") DiveSphere
+        ul.flex.space-x-4
+          each item in navItems
+            li
+              a.text-white(class="hover:text-gray-300", href=item.href)= item.text
+
+
+block content
+    header.w-full.bg-slate-100.fixed.top-0.left-0.z-10
+      .container.flex.justify-between.items-center
+        a.font-bold(href="#") Foo Company
+        nav(class="bg-white border-gray-200 dark:bg-grey-900 dark:border-gray-700") 
+          ul.flex.justify-end
+            each item in navItems
+              li
+                a.block.p-4(href="#")= item
+    main
+      section.relative.mb-12
+        img.w-full.h-screen.object-cover.brightness-50(src="/images/banner.png", alt="key visual of Foo Company")
+        h1(class="text-6xl font-bold text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2") Foo Company
+      section.container.mb-12
+        h2.text-4xl.font-bold.mb-6 Our Services
+        .grid.grid-cols-3.gap-12
+          div
+            h3.text-2xl.font-bold.mb-3 Service 1
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan, sem et porttitor placerat, lacus risus molestie ligula, congue venenatis augue ante ac dui. Aliquam ipsum neque, tempus id magna eget, fringilla sollicitudin nunc. Phasellus non eros maximus, posuere elit in, vestibulum orci. Phasellus eget pellentesque ligula.
+          div
+            h3.text-2xl.font-bold.mb-3 Service 2
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan, sem et porttitor placerat, lacus risus molestie ligula, congue venenatis augue ante ac dui. Aliquam ipsum neque, tempus id magna eget, fringilla sollicitudin nunc. Phasellus non eros maximus, posuere elit in, vestibulum orci. Phasellus eget pellentesque ligula.
+          div
+            h3.text-2xl.font-bold.mb-3 Service 3
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan, sem et porttitor placerat, lacus risus molestie ligula, congue venenatis augue ante ac dui. Aliquam ipsum neque, tempus id magna eget, fringilla sollicitudin nunc. Phasellus non eros maximus, posuere elit in, vestibulum orci. Phasellus eget pellentesque ligula.
+    footer.w-full.bg-slate-900.text-white
+      .container.flex.justify-between.items-center.mb-6
+        a.font-bold(href="#") Foo Company 
+        nav 
+          ul.flex.justify-end
+            each item in navItems
+              li
+                a.block.p-4(href="#")= item
+      small.block.text-center Copyright © 2023 Foo Company
