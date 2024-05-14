@@ -1,18 +1,21 @@
 # DiveSphere
 
-DiveSphere is a web application that combines dive log features with social media and mapping functionalities for dive sites worldwide. Users can book services with providers for dive charters, courses, and more.
+DiveSphere is a web application that combines dive log features with social media and mapping functionalities for dive sites worldwide. Users can book services with providers for dive charters, courses, and more. System will allow for import of dive logs, video, text.
 
 ## Technologies Used
 
 - **Backend**: Node.js, Express.js
-- **Frontend**: Pug, TailwindCSS
+- **Frontend**: Pug, TailwindCSS, DaisyUI
 - **Database**: MongoDB
 
 ## Project Structure
 
+  - **App.js**: Root application component.
+  - **index.js**: Main entry point for the application.
+
 ### Backend
 
-The backend code is located in the `backend` directory and is structured as follows:
+The backend code is structured as follows:
 
 - **config/**: Configuration files (e.g., database connection).
 - **controllers/**: Functions to handle requests and responses.
@@ -20,23 +23,17 @@ The backend code is located in the `backend` directory and is structured as foll
 - **routes/**: API routes.
 - **middlewares/**: Middleware functions.
 - **utils/**: Utility functions and helpers.
-- **app.js**: Main application setup.
-- **server.js**: Server configuration and startup.
 
 ### Frontend
 
-The frontend code is located in the `frontend` directory and is structured as follows:
+The frontend code is structured as follows:
 
-- **public/**: Static files, including the main HTML file.
 - **views/**: Pug templates for server-side rendering.
-- **src/**: Source files for the application.
-  - **assets/**: Images, icons, and other static assets.
+- **public/**: Source files for the application.
+  - **images/**: Images, icons, and other static assets.
   - **components/**: Reusable components.
-  - **pages/**: Page-level components.
   - **styles/**: CSS and styling files.
-  - **scripts/**: JavaScript files.
-  - **App.js**: Root application component.
-  - **index.js**: Main entry point for the application.
+  - **javascripts/**: JavaScript files.
 
 ## Getting Started
 
@@ -52,33 +49,20 @@ The frontend code is located in the `frontend` directory and is structured as fo
    git clone https://github.com/vancityactivist/DiveSphere.git
    ```
 
-2. Navigate to the backend directory and install dependencies:
+2. Iinstall dependencies:
    ```bash
-   cd DiveSphere/backend
-   npm install
-   ```
-
-3. Navigate to the frontend directory and install dependencies:
-   ```bash
-   cd ../frontend
+   cd DiveSphere
    npm install
    ```
 
 ### Running the Application
 
-1. Start the backend server:
+1. Start the server:
    ```bash
-   cd backend
    npm start
    ```
 
-2. Start the frontend development server:
-   ```bash
-   cd ../frontend
-   npm start
-   ```
-
-### Environment Variables
+### Environment Variables (Upcoming)
 
 Create a `.env` file in the `backend` directory with the following variables:
 
@@ -89,7 +73,7 @@ PORT=<your-port-number>
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+This app is in the initial stages. Nothing to contribute.... yet.
 
 ## License
 
